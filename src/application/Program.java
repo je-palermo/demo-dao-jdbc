@@ -1,11 +1,9 @@
 package application;
 
-import java.util.Date;
 import java.util.Locale;
 
 import model.dao.DaoFactory;
 import model.dao.SellerDao;
-import model.entities.Department;
 import model.entities.Seller;
 
 public class Program {
@@ -15,13 +13,11 @@ public class Program {
 		Locale.setDefault(Locale.US);
 		
 		
-		Department obj = new Department(1, "Books");
-		
 		//Injeção de dependencia 
 		// ^		^		^		 
 		SellerDao sellerDao = DaoFactory.createSellerDao();
 		
-		Seller sel = new Seller(21, "Fudencio", "fudencio.com", new Date(), 3000.0, obj);
+		Seller sel = sellerDao.findById(3);
 		
 		System.out.println(sel);
 		
