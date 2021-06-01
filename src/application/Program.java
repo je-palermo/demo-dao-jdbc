@@ -14,11 +14,10 @@ public class Program {
 		
 		
 		//Injeção de dependencia 
-		// ^		^		^		 
+		// ^		^		^	
+		System.out.println("=== Test 1: Seller findById ===");
 		SellerDao sellerDao = DaoFactory.createSellerDao();
-		
 		Seller sel = sellerDao.findById(3);
-		
 		System.out.println(sel);
 		
 		
