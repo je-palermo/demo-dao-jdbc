@@ -54,6 +54,10 @@ public class Program {
 		
 		System.out.println("Atualizado: " + seller.getName());
 		
+		System.out.println("\n=== Test 6: Seller delete ===");
+		sellerDao.deleteById(8);
+		
+		System.out.println("Id deletado com sucesso!");
 	}
 
 }
